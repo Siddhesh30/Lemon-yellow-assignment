@@ -14,7 +14,7 @@ import rocket from "../assets/images/rocket-2.png";
 import collabrate from "../assets/images/cta.png";
 import collabrate1 from "../assets/images/cta1.png";
 import collabrate2 from "../assets/images/cta2.png";
-// import clouds from "../assets/images/cloud-3.png";
+import collabrate3 from "../assets/images/cta-know-us.png";
 import group33 from "../assets/images/group-33.png";
 import service1 from "../assets/images/services-cloud-services.png";
 import service2 from "../assets/images/services-cyber-security.png";
@@ -35,10 +35,30 @@ import acc1 from "../assets/images/moon.png";
 // import env3 from "../assets/images/group-54-copy-3.png";
 // import env4 from "../assets/images/group-55.png";
 import envelope from "../assets/images/group-59.png";
+import clouds from "../assets/images/cloud-3.png";
+import clouds2 from "../assets/images/combined-shape.png";
 
 const Styles = styled.div`
   * {
     font-family: "Merriweather";
+  }
+  #second-section {
+    margin: 15% 0;
+  }
+  #third-section {
+    margin: 20% 0;
+  }
+  #third-text-section {
+    margin: 15% 0 0 0;
+  }
+  #fourth-text-section {
+    margin: 10% 0 10% 0;
+  }
+  #fourth-text-section {
+    margin: 10% 0 10% 0;
+  }
+  #fifth-text-section {
+    margin: 10% 0 0% 0;
   }
   .title-div {
     margin-top: 25%;
@@ -59,6 +79,7 @@ const Styles = styled.div`
     width: 100%;
     height: 90%;
     object-fit: contain;
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
   .collabrate-button {
     width: 176px;
@@ -66,33 +87,84 @@ const Styles = styled.div`
     margin: 32px 400px 0 0;
     object-fit: contain;
   }
-  /* .clouds {
+  .collabrate-button1 {
+    width: 176px;
+    height: 40px;
+    margin: 32px 400px 0 0;
+    object-fit: contain;
+  }
+  .bounce-top {
+    cursor: pointer;
+  }
+  .bounce-top:hover {
+    animation: bounce-top 0.5s both;
+  }
+
+  @keyframes bounce-top {
+    50% {
+      -webkit-transform: translateY(-25px);
+      transform: translateY(-25px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+  }
+  .bounce-top-envelope {
+    cursor: pointer;
+  }
+  .bounce-top-envelope:hover {
+    animation: bounce-top 0.5s both;
+  }
+
+  @keyframes bounce-top-envelope {
+    50% {
+      -webkit-transform: translateY(-25px);
+      transform: translateY(-25px);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+  }
+
+  /*  */
+
+  .clouds {
     width: 100%;
-    height: 80%;
-    padding: 148px 0 79px 55px;
+    height: 100%;
     object-fit: contain;
     color: #fdc679;
     position: absolute;
-    bottom: 0;
-  } */
-  #second-section {
-    margin: 15% 0;
+    top: 90%;
+    left: 0;
   }
-  #second-text-section {
-    margin: 25% 0;
+  .clouds-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    color: #fdc679;
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    z-index: 1;
   }
-  #third-text-section {
-    margin: 15% 0 0 0;
+
+  @-webkit-keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
   }
-  #fourth-text-section {
-    margin: 10% 0 10% 0;
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
   }
-  #fourth-text-section {
-    margin: 10% 0 10% 0;
-  }
-  #fifth-text-section {
-    margin: 10% 0 0% 0;
-  }
+
   .small-text {
     font-family: Titillium Web;
     font-size: 12px;
@@ -138,6 +210,22 @@ const Styles = styled.div`
     height: 131px;
     object-fit: contain;
   }
+  .card-img:hover {
+    animation: rotate-in-center 0.6s cubic-bezier(0.15, 0.16, 0.15, 0.54) both;
+  }
+  @keyframes rotate-in-center {
+    0% {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+
   .body-card {
     margin-top: 15px;
     object-fit: contain;
@@ -166,7 +254,6 @@ const Styles = styled.div`
     color: #333333;
   }
   .link-more {
-    margin: 16px 262px 0 0;
     font-family: Titillium Web;
     font-size: 18px;
     font-weight: normal;
@@ -254,6 +341,111 @@ const Styles = styled.div`
   .join-us {
     margin-top: 35%;
   }
+  .accordian-image {
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Media Query  */
+  @media only screen and (min-width: 360px) and (max-width: 640px) {
+    .title {
+      margin: 0 0 32px;
+      font-family: Merriweather;
+      font-size: 24px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000;
+      text-align: center;
+    }
+    .br {
+      display: none;
+    }
+    .collabrate-button1 {
+      margin-left: 22%;
+    }
+    .clouds {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      color: #fdc679;
+      position: absolute;
+      top: 75%;
+      left: 0;
+    }
+    .clouds-1 {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      color: #fdc679;
+      position: absolute;
+      top: 75%;
+      left: 0%;
+      z-index: 1;
+    }
+    .who-text {
+      margin-top: 10%;
+    }
+    .head-text {
+      font-family: Merriweather;
+      font-size: 18px;
+      color: #000000;
+    }
+    .mid-text {
+      font-family: Titillium Web;
+      font-size: 12px;
+    }
+    .link-more {
+      font-family: Titillium Web;
+      font-size: 15px;
+      color: #fe5814;
+    }
+    .background-div {
+      display: none;
+    }
+    .accordian-image {
+      width: 251px;
+      height: 173px;
+      object-fit: contain;
+      margin: 5% 0;
+    }
+    .envelope {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      position: absolute;
+      top: 35%;
+      left: 58%;
+    }
+    .bounce-top-envelope {
+      width: 116px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .head-text {
+      font-family: Merriweather;
+      font-size: 15px;
+    }
+    .join-us {
+      margin-top: 10%;
+    }
+    .envelope-br {
+      display: none;
+    }
+  }
 `;
 
 function Home() {
@@ -266,11 +458,15 @@ function Home() {
               <Col xs={12} sm={12} md={6} lg={6} xl={6}>
                 <div className={"title-div"}>
                   <h1 className={"title"}>
-                    We Engineer <br /> brilliant <br />
+                    We Engineer <br /> brilliant <br className={"br"} />
                     solutions
                   </h1>
-                  <a className={"collabrate-button"} href="/">
-                    <Image src={collabrate} alt="collabrate" />
+                  <a className={"collabrate-button1 mt-5"} href="/">
+                    <Image
+                      src={collabrate}
+                      alt="collabrate"
+                      className={"bounce-top"}
+                    />
                   </a>
                 </div>
               </Col>
@@ -283,9 +479,22 @@ function Home() {
           </section>
 
           <section id={"second-section"}>
+            <div className={"mb-5"}>
+              <Image src={clouds} alt="" className={"clouds-1"} />
+              <Image src={clouds2} alt="" className={"clouds"} />
+            </div>
+          </section>
+
+          <section id={"third-section"}>
             <Row>
-              <Col xs={12} sm={12} md={6} lg={6} xl={6}>
-                <div className={"second-text-section"}>
+              <Col
+                xs={{ order: "last" }}
+                sm={12}
+                md={6}
+                lg={6}
+                xl={{ order: "first" }}
+              >
+                <div className={"who-text"}>
                   <h4 className={"small-text"}>Who are we</h4>
                   <div>
                     <h1 className={"head-text"}>We are clouds experts</h1>
@@ -295,6 +504,13 @@ function Home() {
                       expertise and <br /> favourite technology, with pleasure!
                     </h3>
                   </div>
+                  <a className={"collabrate-button know-us mt-5"} href="/">
+                    <Image
+                      src={collabrate3}
+                      alt="collabrate"
+                      className={"bounce-top"}
+                    />
+                  </a>
                 </div>
               </Col>
               <Col xs={12} sm={12} md={6} lg={6} xl={6}>
@@ -631,16 +847,23 @@ function Home() {
                   <Card.Body>
                     <Row>
                       <Col md={6}>
-                        <div className={"acc-desc"}>
+                        <div className={"acc-desc mt-3"}>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit, sed do eiusmod tempor incididunt ut labore et
                           dolore magna aliqua. Ut enim ad minim veniam, quis
                           nostrud exercitation ullamco laboris nisi ut aliquip
                           ex ea commodo consequat.
+                          <br />
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit,
                         </div>
                       </Col>
                       <Col md={6}>
-                        <Image src={acc1} alt="acc1" />
+                        <Image
+                          src={acc1}
+                          alt="acc1"
+                          className={"accordian-image"}
+                        />
                       </Col>
                     </Row>
                   </Card.Body>
@@ -671,7 +894,11 @@ function Home() {
                         </div>
                       </Col>
                       <Col md={6}>
-                        <Image src={acc1} alt="acc1" />
+                        <Image
+                          src={acc1}
+                          alt="acc1"
+                          className={"accordian-image"}
+                        />
                       </Col>
                     </Row>
                   </Card.Body>
@@ -684,12 +911,12 @@ function Home() {
                     className={"acc-header"}
                     as={Button}
                     variant="link"
-                    eventKey="1"
+                    eventKey="2"
                   >
                     Hybrid Model
                   </Accordion.Toggle>
                 </Card.Header>
-                <Accordion.Collapse eventKey="1">
+                <Accordion.Collapse eventKey="2">
                   <Card.Body>
                     <Row>
                       <Col md={6}>
@@ -702,7 +929,11 @@ function Home() {
                         </div>
                       </Col>
                       <Col md={6}>
-                        <Image src={acc1} alt="acc1" />
+                        <Image
+                          src={acc1}
+                          alt="acc1"
+                          className={"accordian-image"}
+                        />
                       </Col>
                     </Row>
                   </Card.Body>
@@ -713,25 +944,29 @@ function Home() {
 
           <section id="fifth-text-section">
             <Row>
-              <Col md={6}>
+              <Col xs={4} sm={4} md={6} lg={6} xl={6}>
                 <h4 className={"small-text"}>Collabrate with us</h4>
                 <div>
                   <h1 className={"head-text"}>
-                    Have an idea? Hold that thought! <br /> We will reach out to
-                    you
+                    Have an idea?
+                    <br className={"envelope-br"} /> Share With Us!
                   </h1>
-                  <a className={"collabrate-button mt-3"} href="/">
-                    <Image src={collabrate1} alt="collabrate" />
+                  <a className={"collabrate-button-envelope mt-5"} href="/">
+                    <Image
+                      src={collabrate1}
+                      alt="collabrate"
+                      className={"bounce-top-envelope"}
+                    />
                   </a>
                 </div>
               </Col>
-              <Col md={6}>
+              <Col xs={4} sm={4} md={6} lg={6} xl={6}>
                 <div>
                   <Image src={envelope} className={"envelope"} />
                 </div>
               </Col>
 
-              <Col md={6} className={"join-us"}>
+              <Col xs={6} sm={6} md={6} lg={6} xl={6} className={"join-us"}>
                 <h4 className={"small-text"}>We Are looking for talents</h4>
                 <div>
                   <h1 className={"head-text"}>
@@ -739,7 +974,11 @@ function Home() {
                     do?
                   </h1>
                   <a className={"collabrate-button mt-3"} href="/">
-                    <Image src={collabrate2} alt="collabrate" />
+                    <Image
+                      src={collabrate2}
+                      alt="collabrate"
+                      className={"bounce-top-envelope"}
+                    />
                   </a>
                 </div>
               </Col>

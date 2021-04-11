@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { Col, Container, Image, Nav, Navbar, Row } from "react-bootstrap";
 import { GiHamburgerMenu } from "react-icons/gi";
 import navImage from "../assets/images/group-2.png";
 import { stack as Menu } from "react-burger-menu";
@@ -15,7 +15,7 @@ const Styles = styled.div`
 
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #373a47;
+    background: #fe5814;
   }
 
   /* Color/shape of burger icon bars on hover*/
@@ -25,13 +25,13 @@ const Styles = styled.div`
 
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
-    height: 24px;
-    width: 24px;
+    width: 95px;
+    height: 95px;
   }
 
   /* Color/shape of close button cross */
   .bm-cross {
-    background: #bdc3c7;
+    background: #fe5814;
   }
 
   /*
@@ -45,7 +45,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
   /* General sidebar styles */
   .bm-menu {
-    background: #373a47;
+    background: #ffffff;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
@@ -82,40 +82,77 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .bm-item:hover {
     color: #ffffff;
   }
+  .navbar-light .navbar-nav .nav-link {
+    padding-right: 33px;
+    font-family: Titillium Web;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+  }
+  .menu-item {
+    font-family: Merriweather;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    line-height: 2rem;
+  }
 `;
 
 function NavigationBar() {
   return (
     <>
       <Styles>
-        <Navbar bg="light" expand="lg" className={"pr-5 pl-5"}>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">About Us</Nav.Link>
-              <Nav.Link href="#link">Service</Nav.Link>
-              <Nav.Link href="#link">Contact Us</Nav.Link>
-              <Nav.Link>
-                <Menu right>
-                  <a className="menu-item" href="/">
-                    Home
-                  </a>
-                  <a className="menu-item" href="/salads">
-                    Salads
-                  </a>
-                  <a className="menu-item" href="/pizzas">
-                    Pizzas
-                  </a>
-                  <a className="menu-item" href="/desserts">
-                    Desserts
-                  </a>
-                </Menu>
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+        <Container>
+          <Navbar bg="light" expand="lg">
+            <Navbar.Brand href="#home">
+              <Image src={navImage} alt="" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                <Nav.Link className={"nav-link"} href="#home">
+                  Home
+                </Nav.Link>
+                <Nav.Link href="#link">About Us</Nav.Link>
+                <Nav.Link href="#link">Service</Nav.Link>
+                <Nav.Link href="#link">Contact Us</Nav.Link>
+                <Nav.Link>
+                  <Menu right>
+                    <a className="menu-item" href="/">
+                      Home
+                    </a>
+                    <a className="menu-item" href="/">
+                      About Us
+                    </a>
+                    <a className="menu-item" href="/">
+                      Services
+                    </a>
+                    <a className="menu-item" href="/">
+                      Partners
+                    </a>
+                    <a className="menu-item" href="/">
+                      Career
+                    </a>
+                    <a className="menu-item" href="/">
+                      Blogs
+                    </a>
+                    <a className="menu-item" href="/">
+                      Contact Us
+                    </a>
+                  </Menu>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </Container>
       </Styles>
     </>
   );

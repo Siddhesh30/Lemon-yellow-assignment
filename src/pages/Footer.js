@@ -3,7 +3,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import styled from "styled-components";
 
 import collabrate from "../assets/images/cta.png";
-import { FaInstagram } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
 import { BiPhone } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 
@@ -96,7 +96,7 @@ const Styles = styled.div`
     color: #fe5814;
   }
   .insta-icon {
-    background-image: linear-gradient(45deg, #fd9714 8%, #fe5814 92%);
+    color: #fe5814;
   }
   .contact-info {
     padding: 0px 15px;
@@ -108,6 +108,20 @@ const Styles = styled.div`
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
+  }
+  @media only screen and (min-width: 360px) and (max-width: 640px) {
+    .contact-class {
+      display: none;
+    }
+    .footer-cont {
+      margin: 14% 0 0 0;
+      padding: 50px;
+      object-fit: contain;
+      background-image: linear-gradient(120deg, #343434 15%, #000000 146%);
+    }
+    .unstyled {
+      margin: 5% 0;
+    }
   }
 `;
 function Footer() {
@@ -130,13 +144,13 @@ function Footer() {
                 <div className={"mt-5"}>
                   <h2 className={"location"}>Location</h2>
                   <Row>
-                    <Col md={6}>
+                    <Col xs={6} sm={6} md={6}>
                       <h3 className={"office-text"}>
                         Need the Office. <br /> Address here
                       </h3>
                       <h3 className={"country"}>Australia</h3>
                     </Col>
-                    <Col md={6}>
+                    <Col xs={6} sm={6} md={6}>
                       <h3 className={"office-text"}>
                         Need the Office. <br /> Address here
                       </h3>
@@ -146,7 +160,7 @@ function Footer() {
                 </div>
               </Col>
 
-              <Col xs={12} sm={12} md={3} lg={3} xl={3}>
+              <Col xs={6} sm={6} md={3} lg={3} xl={3}>
                 <ul className={"unstyled"}>
                   <li className={"links"}>Links</li>
                   <li>Home</li>
@@ -161,7 +175,7 @@ function Footer() {
                 </ul>
               </Col>
 
-              <Col xs={12} sm={12} md={3} lg={3} xl={3}>
+              <Col xs={6} sm={6} md={3} lg={3} xl={3}>
                 <ul className={"unstyled"}>
                   <li className={"links"}>Service</li>
                   <li>Cloud Service</li>
@@ -173,13 +187,13 @@ function Footer() {
                 </ul>
               </Col>
 
-              <Col xs={12} sm={12} md={3} lg={3} xl={3}>
+              <Col xs={6} sm={6} md={3} lg={3} xl={3}>
                 <div>
                   <h2 className={"social-media"}>SOCIAL MEDIA</h2>
-                  <FaInstagram size={"2rem"} className={"insta-icon"} />
+                  <GrInstagram size={"2rem"} className={"insta-icon"} />
                 </div>
 
-                <div className={"mt-5"}>
+                <div className={"mt-5 contact-class"}>
                   <h2 className={"social-media"}>Contact</h2>
 
                   <div className={"d-flex mt-4"}>
